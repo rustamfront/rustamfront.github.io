@@ -1,0 +1,337 @@
+@import bourbon
+@import fonts.sass
+@import _vars.sass
+@import "app/libs/font-awesome/css/font-awesome.sass"
+
+.service
+	margin-bottom: 115px
+	.quote 
+		text-align: center
+		margin-top: 115px
+		margin-bottom: 230px
+		p 
+			font-size: em(18px)
+			color: $lighten
+			padding: 0 135px
+	
+		h4 
+			font-family: "Raleway-Bold", sans-serif
+			font-size: em(20px)
+			color: $dark
+			span 
+				font-family: "Raleway-Regular", sans-serif
+				font-size: em(15px)
+				color: #707070
+
+
+.skills 
+	display: flex
+	justify-content: space-between
+	.skill
+		text-align: center 
+		.circle 
+			height: 183px
+			width: 183px
+			background-color: $blue
+			border-radius: 50%
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			color: white
+			font-size: 70px
+			position: relative
+			cursor: pointer
+			transition: all 0.3s
+			&:hover 
+
+				.ring 
+					opacity: 0
+			.ring 
+				background-color: transparent
+				border: 7px solid white
+				width: 153px 
+				height: 153px
+				border-radius: 50%
+				position: absolute
+				top: 8px
+				left: 8px
+				
+		h3 
+			font-family: "Raleway-Bold", sans-serif
+			font-size: em(26px)
+			text-transform: capitalize
+			color: $dark
+			margin-top: 45px
+		p 
+			color: $lighten
+
+.project
+	text-align: center
+	border-top: 1px solid #EFEFEF
+	margin-bottom: 123px
+	h2
+		color: $dark
+		margin-bottom: 20px
+		margin-top: 120px
+	p 
+		color: $dark
+		margin-bottom: 70px
+
+	.works
+		.flight, .financial
+			float: right
+		.travels, .calendar
+			float: left
+		.calendar, .financial
+			margin-bottom: 0
+		.design 
+			text-align: left
+			width: 560px
+			height: 300px
+			background-color: #F6F6F6
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 48px
+			cursor: pointer
+			box-sizing: border-box
+			transition: all 0.2s
+			&:hover
+				border: 1px solid $blue
+				border-radius: 5px
+				background-color: #FFF
+				box-shadow: 0 3px 7px 0px rgba(0,108,255,.3)
+				button 
+					background-color: $blue
+					color: white
+			img 
+				width: 201px
+				height: 250px
+				margin-right: 31px
+			h3 
+				font-family: "Raleway-ExtraBold", sans-serif
+				font-size: em(22px)
+				color: $darken
+				text-transform: capitalize
+				margin: 0
+
+			p 
+				color: $light
+				margin-right: 25px
+				margin: 15px 0 30px
+
+			button 
+				background-color: transparent
+				border: 1px solid #D7D7D7
+				border-radius: 20px
+				height: 28px
+				width: 107px
+				font-family: "Raleway-ExtraBold", sans-serif
+				font-size: em(14px)
+				color: $darken
+				text-transform: capitalize
+				cursor: pointer
+
+			.info 
+				display: inline-block
+				width: 271px
+
+.learn 
+	height: 60px
+	width: 200px
+	border-radius: 30px
+	text-transform: uppercase
+	font-family: "Raleway-Bold", sans-serif
+	font-size: em(20px)
+	border: none 
+	color: white 
+	background-color: $blue
+	box-shadow: 0 3px 10px 0 $blue
+	margin-top: 70px
+	cursor: pointer
+
+.video 
+	position: relative
+	height: 600px
+	margin-bottom: 117px
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #000
+		opacity: .75
+
+	.video_info
+   		position: absolute
+   		bottom: 100px
+   		text-align: center
+   		left: 39%
+   		h2 
+   			color: $blue
+   			margin: 0
+   		p 
+   			color: #b6b6b6
+   			margin: 0
+   			margin-top: 10px
+
+
+	#overlay 
+		position: absolute
+		top: 42%
+		left: 50%
+		z-index: 10
+		font-size: 117px
+		color: white
+		cursor: pointer
+	#overlay.o
+   		background: none
+
+
+.client_say
+	text-align: center
+	width: 100%
+	height: 100%
+	margin-bottom: 120px
+	h2 
+		color: $dark
+	p 
+		color: $light
+		margin-bottom: 100px
+
+	.carousel
+		position: relative
+		width: 1008px
+		display: inline-block
+		
+		.slide 
+			width: 490px
+			margin-right: 0px
+			display: inline-block
+			position: relative
+			bottom: 50px
+			.info 
+				background-color: #F6F6F6
+				position: relative
+				height: 280px
+				p 
+					width: 372px
+					display: inline-block
+					margin-top: 80px
+					margin-bottom: 0
+					line-height: em(32px)
+				h3
+					font-size: em(20px)
+					font-family: 'Raleway-Bold', sans-serif 
+					display: inline-block
+				span 
+					font-size: em(15px)
+					font-family: 'Raleway-Regular', sans-serif
+					text-transform: capitalize
+			.photo
+				position: relative
+				z-index: 2
+				top: 50px
+				img
+					border-radius: 50%
+
+	.owl-item 
+		float: left
+		width: 490px
+
+	.owl-stage-outer
+		overflow: hidden
+
+	.slider-wrap
+		position: relative
+
+	.wrapper-nav
+		position: relative
+	
+	.slider-nav
+		position: absolute
+		width: 100%
+		z-index: 2
+		.next
+			right: 0
+	.next, .prev
+		width: 60px
+		position: absolute
+		height: 60px
+		border-radius: 50%
+		background-color: #F0F0F0
+		border: none
+		font-size: 40px
+		color: white
+		cursor: pointer
+		top: 130px
+		&:hover
+			background-color: $blue
+
+footer 
+	background-color: $blue
+	color: white
+	padding-top: 70px
+
+	.row
+		display: flex 
+		justify-content: space-between
+
+	h4
+		font-family: 'Raleway-Semibold', sans-serif
+		font-size: em(21px)
+		text-transform: capitalize
+		margin: 0
+	h1 
+		margin: 0
+		margin-top: -10px
+
+
+	p 
+		margin-top: 0
+		margin-bottom: 30px
+
+	ul
+		list-style: none
+		padding: 0
+		li 
+			a 
+				text-decoration: none
+				color: white
+				text-transform: capitalize
+				font-family: "HelveticaRegular"
+
+	.email 
+		font-size: em(14px)
+		font-family: "MyriadPro-Regular", sans-serif
+		margin-top: 30px
+		display: inline-block
+	.address
+		font-size: em(15px)
+		font-family: "Raleway-Medium", sans-serif
+	.telephone
+		font-family: "HelveticaRegular", sans-serif
+		font-size: em(15px)
+
+	.socials
+		cursor: default
+		a 
+			color: white
+			margin-right: 15px
+
+	.copyright
+		border-top: 1px solid #5B90FF
+		padding: 20px 0
+		margin-top: 70px
+		.container
+			text-align: right
+			p 
+				
+				margin-bottom: 0
+		
+			
+			
+
+	
