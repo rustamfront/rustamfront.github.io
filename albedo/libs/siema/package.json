@@ -1,0 +1,40 @@
+{
+  "name": "siema",
+  "version": "1.0.4",
+  "description": "Lightweight and simple carousel with no dependencies",
+  "main": "src/siema.js",
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-plugin-transform-object-assign": "6.8.0",
+    "babel-preset-latest": "^6.16.0",
+    "uglify-js": "2.7.4"
+  },
+  "scripts": {
+    "build": "babel src/siema.js --presets=latest --plugins=transform-object-assign | uglifyjs - --compress --mangle --output dist/siema.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelgrzybek/siema.git"
+  },
+  "author": {
+    "name": "Pawel Grzybek",
+    "email": "grzybecki@gmail.com",
+    "url": "https://pawelgrzybek.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pawelgrzybek/siema/issues"
+  },
+  "homepage": "https://pawelgrzybek.com/siema",
+  "keywords": [
+    "slider",
+    "carousel",
+    "lightweight"
+  ],
+  "readme": "# Siema - Lightweight and simple carousel with no dependencies\n\nFull docs with examples: [https://pawelgrzybek.com/siema/](https://pawelgrzybek.com/siema/).\n\nSiema is a lightweight (only 1kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said \"do that shit yourself\". It is 100% open source and [available on Github](https://pawelgrzybek.com/siema/). It is free to use on personal and commercial projects. Use it with your favourite module bundler or by manually injecting the script into your project.\n\n## Installation\n\nSetup is trivially easy. A little bit of markup...\n\n```html\n<div class=\"siema\">\n  <div>Hi, I'm slide 1</div>\n  <div>Hi, I'm slide 2</div>\n  <div>Hi, I'm slide 3</div>\n  <div>Hi, I'm slide 4</div>\n</div>\n```\n\nIf you are using a module bundler like Webpack or Browserify...\n\n```bash\nnpm i -S siema\n\n// or\n\nyarn add siema\n```\n\n```js\nimport Siema from 'siema';\nnew Siema();\n```\n\n...or manually inject the minified script into your website.\n\n```html\n<script src=\"siema.min.js\"></script>\n<script>\n  new Siema();\n</script>\n```\n\n## Options\n\nSiema comes with a few (optional) settings that you can change by passing an object as an argument. Default values are presented below.\n\n```js\nnew Siema({\n  selector: '.siema',\n  duration: 200,\n  easing: 'ease-out',\n  perPage: 1,\n  startIndex: 0,\n  draggable: true,\n  threshold: 20,\n  loop: false,\n});\n```\n\n- `selector` - (string or DOM element) specify the selector\n- `duration` - (number) slide transition duration (in ms)\n- `easing` - (string) the same as transition-timing-function in CSS\n- `perPage` - (number or object) the number of slides to be shown\n- `startIndex` - (number) index of the starting slide (zero-based)\n- `draggable` - (boolean) use dragging and touch swiping\n- `threshold` - (number) touch and mouse dragging threshold (in px)\n- `loop` - (boolean) loop the slides around\n\n## API\n\nAs mentioned above, Siema doesn't come with many options - just a few useful methods. Combine it with some very basic JavaScript and voila!\n\n- `next()` - go to next slide\n- `prev()` - go to previous slide\n- `goTo(index)` - go to a specific slide\n- `currentSlide` - index of the current active slide (read only)\n\n## Siema used in production\n\nNowhere yet — I've just built it. If you use it on your website please let me know and I will make sure to add the URL of your project here.\n\n## Browser support\n\n- IE10\n- Chrome 12\n- Firefox 16\n- Opera 15\n- Safari 4\n- Android Browser 4.0\n- iOS Safari 6.0\n\n## Gem\n\n[Siema-rails](https://github.com/Naggi-Goishi/siema-rails) allows you to use Siema as a a gem. Thanks to [Naggi Goishi](https://github.com/Naggi-Goishi) for amazing contribution.\n\n```ruby\ngem 'siema-rails'\n```\n\n## Contributing\n\nSiema's purpose is to provide a basic carousel tool and allow developers to extend it by using the available methods. It doesn't come with any complex configuration and myriad options — I would like to keep it this way. If you need a more powerful library I recommend the amazing [Flickity](http://flickity.metafizzy.co/) by David DeSandro or [Swiper](http://idangero.us/swiper/) by iDangero team.\n\nBug fixes are more than welcome. If you have a feature suggestion please open an issue on Github. Before sending a pull request make sure to use the 'build' task please.\n\n```bash\nnpm run build\n\n//or\n\nyarn run build\n```\n\n## Extra\n\nSiema means 'hello' in Polish. When I play around with some code, I always use random names. That's the whole story behind the name of this one :) Huge thanks to [Jarkko Sibenberg](http://www.sibenberg.com/) for the cute logo design!\n\n- - -\n\nBuilt by [Paweł Grzybek](https://pawelgrzybek.com/) | Follow me on: [Twitter](https://twitter.com/pawelgrzybek), [Github](https://github.com/pawelgrzybek), [Instagram](https://www.instagram.com/pawelgrzybek/)\n",
+  "readmeFilename": "README.md",
+  "_id": "siema@1.0.4",
+  "_shasum": "d2ada41b250f004a0aff5aedd0695316e91ed1a9",
+  "_from": "siema@",
+  "_resolved": "https://registry.npmjs.org/siema/-/siema-1.0.4.tgz"
+}
