@@ -1,0 +1,276 @@
+@import media.sass
+@import bourbon
+@import fonts.sass
+@import "app/libs/owl.carousel/dist/assets/owl.carousel.min"
+
+.active-mnu
+	background-color: #8C8C8C
+	opacity: .7
+	border-radius: 10px
+	box-shadow: 0 0 0 1px #AFB0AA
+	transition: background-color .25s ease
+
+h2
+	font-size: em(30px)
+	font-family: "Roboto-Regular", sans-serif
+	text-transform: uppercase
+	font-weight: normal
+	
+a 	
+	outline: none
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #FFF
+	z-index: 999
+	background-image: url("../Images/preloader.gif")
+	background-repeat: no-repeat
+	background-position: center
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+
+	header
+		min-height: 796px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(0, 0, 0, .55)
+			min-height: 796px
+			z-index: 1
+		.carousel
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			.owl-stage
+
+			.owl-dots
+				position: absolute
+				bottom: 23px
+				width: 100%
+				text-align: center
+				z-index: 1
+				.owl-dot
+					display: inline-block
+					margin: 0 5px
+					width: 18px
+					height: 18px
+					border: 1px solid #FF7200
+					border-radius: 50%
+					cursor: pointer
+					transition: background-color .25s ease
+					&.active
+						background-color: #FF7200
+						box-shadow: 0 0 0 1px #FF7200
+			.slide-wrap
+				float: left
+				position: relative
+			.slide-bg
+				background-size: cover
+				min-height: 796px
+				background-position: center
+				
+		.top_line
+			position: relative
+			z-index: 2
+			padding-top: 78px
+
+			.logotype
+				display: inline-block
+				.logo
+					display: inline-block
+					text-transform: uppercase
+					color: #ED7010
+					text-decoration: none
+					font-family: 'Dosis-ExtraBold', sans-serif
+					width: 166px
+	
+					h1
+						display: inline
+						font-size: em(30px)
+	
+						span 
+						 	color: white
+
+			.menu
+				text-align: right
+				ul 
+					text-align: center
+					padding: 0
+					margin: 0
+					list-style-type: none
+					border: 2px solid #868682
+					display: inline-block
+					border-radius: 10px
+
+					li 	
+						display: inline-block
+						a 
+							display: block
+							padding: 5px 23px
+							text-decoration: none
+							text-transform: uppercase
+							color: #000
+							font-family: "Roboto-Regular", sans-serif
+							font-size: em(22px)
+			.main-mnu
+				display: none
+				ul
+					display: block
+					li
+						display: block
+						a 
+
+		.welcome
+			position: relative
+			z-index: 2
+			position: relative
+			text-align: center
+			margin-top: 150px
+			h1 
+				text-transform: uppercase
+				font-size: em(40px)
+				font-family: "Roboto-Bold", sans-serif
+				color: #ED7010
+				text-shadow: 0px 2px 3px black
+				margin: 15px
+				span
+					color: #fff
+			h2
+				color: #fff
+				margin: 10px
+
+		form 
+			z-index: 2
+			position: relative
+			text-align: center
+			margin-top: 90px
+			input[type="text"]
+				padding-left: 38px
+				width: 462px
+				height: 58px
+				border-radius: 10px 0 0 10px
+				border: 2px solid #AFB0AA
+				border-right: none
+				background-color: rgba(255, 255, 255, .5)
+				font-family: "Roboto-Bold", sans-serif
+				text-transform: uppercase
+				font-size: em(18px)
+				text-align: center
+				&:focus
+					outline: none
+				&::placeholder
+					color: rgba(0, 0, 0, .6)
+			.btn-search
+				position: relative
+				right: 4px
+				top: 23px
+				height: 58px
+				width: 95px
+				display: inline-block
+				background-color: rgba(255, 255, 255, .5)
+				background-image: url('../Images/search.png')
+				background-size: 40px
+				background-repeat: no-repeat
+				background-position: 50% 
+				border-radius: 0 10px 10px 0
+				border: 2px solid #AFB0AA
+				border-left: none
+				&:hover
+					cursor: pointer
+
+		.m-search
+			position: absolute
+			right: 65px
+			top: 87px
+			z-index: 5
+			display: inline-block
+
+			div
+  				width: 31px
+  				height: 31px
+  				background-image: url('../Images/search.png')
+  				background-size: 30px
+  				background-position: 50% 
+  				background-repeat: no-repeat
+  				cursor: pointer
+		.toggle-search
+			display: none
+			position: absolute
+			top: 40px
+			right: 65px
+
+			.toggle-field
+				width: 100%
+				height: 30px 
+				border: none
+				border-radius: 10px
+		//Toggle menu
+
+		.toggle-mnu 
+  			display: block
+  			width: 28px
+  			height: 28px
+  			margin-top: 14px
+  			position: absolute
+  			top: 78px
+  			right: 15px
+			
+  			span:after, span:before 
+  			  	content: ""
+  			  	position: absolute
+  			  	left: 0
+  			  	top: 9px
+			
+  			span:after
+  			  	top: 18px
+			
+  			span 
+  			  	position: relative
+  			  	display: block
+			
+  			span, span:after, span:before
+  			  	width: 100%
+  			  	height: 2px
+  			  	background-color: #fff
+  			  	transition: all 0.3s
+  			  	backface-visibility: hidden
+  			  	border-radius: 2px
+			
+			
+  			&.on span 
+  			  	background-color: transparent
+			
+  			&.on span:before 
+  			  	transform: rotate(45deg) translate(-1px, 0px)
+			
+  			&.on span:after 
+  			  	transform: rotate(-45deg) translate(6px, -7px)
+
+  		
+
+
+
+		
+
+
+
+
+		
