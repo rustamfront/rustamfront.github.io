@@ -1,0 +1,184 @@
+@import "bourbon"
+
++font-face("LatoBold", "../fonts/Lato-Bold", $file-formats: ttf)
++font-face("LatoLight", "../fonts/Lato-Light", $file-formats: ttf)
+
+.container
+	width: 1170px
+	margin: 0 auto
+
+.page
+	margin: 0
+	padding: 0
+
+.top-line
+	height: 100px 
+
+.top-line__button
+	background-color: #457BF3
+	width: 100px
+	height: 100px
+	color: #FFF
+	font-size: 25px
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	position: absolute
+	top: 0
+	left: 0
+
+.top-line__search
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 1px solid #457BF3
+	color: #457BF3
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	float: right
+	margin-top: 25px
+
+.content
+	background-color: #242F3D
+	height: 5022px
+	padding-top: 85px
+	box-sizing: border-box
+
+.photo
+	margin-bottom: 30px
+	position: relative
+	padding: 20px 30px
+	box-sizing: border-box
+	color: #FFF
+	cursor: pointer
+	overflow: hidden
+	transition: all .3s
+	&:hover
+		transform: scale(1.1)
+		.fa, .photo__title, .photo__head, .photo__description, .photo__arrow  
+			display: none
+	.fa 
+		font-size: 30px
+
+.photo__title
+	font-family: "LatoBold", sans-serif
+	text-transform: uppercase
+	font-size: em(12px)
+
+.photo__arrow
+	position: absolute
+	bottom: 41px
+	right: 61px
+
+.photo__head
+	font-family: "LatoLight", sans-serif
+	font-size: em(48px)
+	margin: 0
+	margin-top: 30px
+
+.photo__description
+	font-family: "LatoLight", sans-serif
+	font-size: em(18px)
+	margin: 0
+
+.container__deer
+	width: 270px
+	height: 294px
+	background-image: url("../img/deer.jpg")
+	background-position: -110px -125px
+	float: left
+
+
+.container__mountains
+	background-image: url("../img/mountains.jpg")
+	width: 270px
+	height: 294px
+	float: left
+	margin: 0 30px
+	background-position: -260px -45px
+
+.container__field
+	background-image: url("../img/field.jpg")
+	width: 570px
+	height: 703px
+	float: right
+	background-position: -225px 0px
+
+.container__breakfast
+	background-image: url("../img/breakfast.jpg")
+	width: 570px
+	height: 703px
+	float: left
+	margin-right: 30px
+	background-position: -15px -245px
+
+.container__explore
+	background-image: url("../img/exploring.jpg")
+	width: 570px
+	height: 294px
+	float: left
+	background-position: -70px -135px
+
+.container__shell
+	background-image: url("../img/Shell.jpg")
+	width: 1170px
+	height: 830px
+	background-position: -70px -10px
+
+.container__jump
+	background-image: url("../img/jump.jpg")
+	width: 1170px
+	height: 485px
+	background-position: -15px -60px
+
+.container__boat
+	background-image: url("../img/boat.jpg")
+	width: 570px
+	height: 485px
+	float: left
+	background-position: -55px -96px
+
+.container__cafe
+	background-image: url("../img/cafe.jpg")
+	width: 570px
+	height: 656px
+	float: right
+	background-position: -187px -126px
+
+.container__turtle
+	width: 570px
+	height: 644px
+	background-image: url("../img/turtle.jpg")
+	background-position: -110px -20px
+	float: left
+
+.container__whale
+	width: 570px
+	height: 294px
+	background-image: url("../img/whale.jpg")
+	background-position: -110px -100px
+	float: right
+
+.container__culture
+	width: 570px
+	height: 786px
+	background-image: url("../img/culture.jpg")
+	background-position: -515px -335px
+	float: right
+
+.container__kayak
+	width: 570px
+	height: 607px
+	background-image: url("../img/kayak.jpg")
+	background-position: -110px -8px
+	float: left
+
+.container__life
+	width: 1170px
+	height: 537px
+	background-image: url("../img/life.jpg")
+	background-position: -39px -138px
+	float: left
