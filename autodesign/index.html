@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="fontawesome-free-5.10.2-web/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <link rel="stylesheet" href="js/all.min.js">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <script>
+        $(document).ready(function(){
+          $(".owl-carousel").owlCarousel({
+              items: 1,
+              nav:true,
+              dots: true
+          });
+
+          $("a.menu__item").click(function() {
+            $("html, body").animate({
+               scrollTop: $($(this).attr("href")).offset().top + "px"
+            }, {
+               duration: 500,
+               easing: "swing"
+            });
+            return false;
+        });
+
+        $(".play_youtube").click(function() {
+            $(".youtube").css({display: "block"});
+            return false;
+        });
+
+        $(".cls").click(function() {
+            $(".youtube").css({display: "none"});
+        })
+
+        $(".menu__btn").click(function() {
+            $(".menu__box").css({display: "block"});
+        })
+        $(".menu__cls").click(function() {
+            $(".menu__box").css({display: "none"});
+        })
+        $(".pride__button").click(function() {
+            $(".pride__block_more").css({display: "flex"});
+        })
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="youtube">
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/FuS_bXJNync" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="cls"><i class="fas fa-times"></i></div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__top row">
+                <div class="hamburger-menu col-lg-5 col-md-5 col-sm-5 col-6">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <span>Меню</span>
+                    <ul class="menu__box">
+                      <li><a class="menu__item" href="#uslugi">Наши услуги</a></li>
+                      <li><a class="menu__item" href="#why">Почему мы?</a></li>
+                      <li><a class="menu__item" href="#form">У ВАС ЕСТЬ ВОПРОСЫ?</a></li>
+                      <li><a class="menu__item" href="#weWork">КАК МЫ РАБОТАЕМ</a></li>
+                      <li><a class="menu__item" href="#pride">НАШИ РАБОТЫ</a></li>
+                      <li><a class="menu__item" href="#comments">ЧТО О НАС ГОВОРЯТ?</a></li>
+                      <li><a class="menu__item" href="#location">ГДЕ МЫ НАХОДИМСЯ</a></li>
+                      <div class="menu__cls">
+                          <i class="fas fa-times"></i>
+                      </div>
+                    </ul>
+                </div>
+                <div class="logo col-lg-2 col-md-2 col-sm-2 col-6">
+                    <div>
+                        <img class="align-middle" src="img/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="contacts col-lg-5 col-md-5 col-sm-5">
+                    <div class="contacts__number"><img src="img/call_icon.png" alt=""><a href="tel:+7(915)333-33-16">+7(915)333-33-16</a></div>
+                    <div class="clock"><img src="img/clock.png" alt="">9:00 - 21:00</div>
+                </div>  
+            </div> 
+            <div class="header__main row">
+                <div class="col-lg-8 block block_1">
+                    <div class="text_red">первая и единственная</div>
+                    <h1 class="head-1">
+                        Детейлинг студия в городе дубна
+                    </h1>
+                    <p>
+                        Работает команда проффесионалов, используется высокотехнологичное оборудоваие и профессиональная химия
+                    </p>
+                    <button class="button">оставить заявку</button>
+                    
+                </div>
+                <div class="col-lg-4 block block_2">
+                    <span> <div class="play">
+                        <span>Посмотрите видео о нашей компании</span>
+                        <a href="" class="play_youtube">
+                            <img src="img/play.png" alt=""></a>
+                        </div>
+                    </span>
+                </div>
+                <div class="headers__socials">
+                    <a class href=""><img src="img/vk.com.png"></a>
+                    <a class="insta" href=""><img src="img/insta.png"></a>
+                </div>
+            </div>
+            <div class="header__uslugi" id="uslugi">
+                <div class="text_red">
+                    Для вас
+                </div>
+                <h2 class="head-2">Наши услуги:</h2>
+                <div class="uslugi__container">
+                        <div class="uslugi__elem">
+                            <img src="img/shining.png" alt="">
+                            <span>Полировка авто</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/taxi.png" alt="">
+                            <span>Защита кузова керамик/жидкое стекло </span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/steering-wheel.png" alt="">
+                            <span>Бережная чистка салона</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/perfume-bottle.png" alt="">
+                            <span>Озонирование салона</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/car-door.png" alt="">
+                            <span>Тонировка</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/mat.png" alt="">
+                            <span>Обклейка антигравийной пленкой</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/tools.png" alt="">
+                            <span>Предпродажная подготовка авто</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/agreement.png" alt="">
+                            <span>Помощь в продаже авто</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/weather-5-512.png" alt="">
+                            <span>Антидождь</span>
+                        </div>
+                        <div class="uslugi__elem">
+                            <img src="img/leather.png" alt="">
+                            <span>Реставрация кожи/пластика салона</span>
+                        </div>
+                </div>
+            </div>
+            <div class="header__why" id="why">
+                <div class="text_red">
+                    Преимущества
+                </div>
+                <h2 class="head-2">Почему мы?</h2>
+                <div class="why__container">
+                    <div class="why__elem">
+                        <div class="circle">
+                        </div>
+                        <h3 class="head-3">Преимущество 1</h3>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. </span>
+                    </div>
+                    <div class="why__elem">
+                        <div class="circle"></div>
+                        <h3 class="head-3">Преимущество 2</h3>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. </span>
+                    </div>
+                    <div class="why__elem">
+                        <div class="circle"></div>
+                        <h3 class="head-3">Преимущество 3</h3>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. </span>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="form" id="form">
+        <div class="container">
+            <div class="form__wrapper">
+                <div>
+                    <div class="text_red">Консультация</div>
+                    <h2 class="head-2">У вас есть вопросы?</h2>
+                    <span>Оставьте заявку и мы проконсультируем вас, и ответим на все интересующие вопросы</span>
+                </div>
+                <form action="mail.php" method="post">
+                    <input name="tel" type="text" class="input" placeholder="Ваш номер">
+                    <input name="email" type="email" class="input input_margin" placeholder="Ваш email">
+                    <input type="submit" name="submit" class="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="weWork" id="weWork">
+        <div class="container">
+            <div class="weWork__wrapper">
+                <div>
+                    <div class="text_red">Схема работы</div>
+                    <h2 class="head-2">Как мы работаем</h2>
+                </div>
+                <div class="weWork__block">
+                        <div class="weWork__elem">
+                            <div class="circle"><div></div></div>
+                            <h3 class="head-3">Оставляйте заявку на сайте</h3>
+                            <span>Мы всегда на связи, с удовольствием проведем вам консультацию.</span>
+                        </div>
+                        <div class="weWork__elem">
+                            <div class="circle"><div></div></div>
+                            <h3 class="head-3">привозите авто</h3>
+                            <span>Или мы забираем его, по вашему желанию.</span>
+                        </div>
+                        <div class="weWork__elem">
+                            <div class="circle"><div></div></div>
+                            <h3 class="head-3">Забираете авто</h3>
+                            <span>Или мы доставим его по адресу который вы назначите.</span>
+                        </div>    
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="pride" id="pride">
+        <div class="container">
+            <div class="pride__wrapper">
+                <div>
+                    <div class="text_red">Гордость</div>
+                    <h2 class="head-2">Наши работы</h2>
+                </div>
+                <div class="pride__block">
+                        <div class="pride__elem">
+                            <a href="images/car-1.jpg" data-lightbox="car-1" data-title="My caption"><img src="images/car-1.jpg" alt=""></a>
+                        </div>
+                        <div class="pride__elem">
+                            <a href="images/armchair.jpg" data-lightbox="armchair" data-title="My caption"><img src="images/armchair.jpg" alt=""></a>
+                        </div>
+                        <div class="pride__elem">
+                                <a href="images/car-2.jpg" data-lightbox="car-2" data-title="My caption"><img src="images/car-2.jpg" alt=""></a>
+                        </div>
+                        <div class="pride__elem">
+                                <a href="images/car-3.jpg" data-lightbox="car-3" data-title="My caption"><img src="images/car-3.jpg" alt=""></a>
+                        </div>
+                </div>
+                
+                <div class="pride__block pride__block_more">
+                    <div class="pride__elem">
+                        <a href="images/car-1.jpg" data-lightbox="car-1" data-title="My caption"><img src="images/car-1.jpg" alt=""></a>
+                    </div>
+                    <div class="pride__elem">
+                        <a href="images/armchair.jpg" data-lightbox="armchair" data-title="My caption"><img src="images/armchair.jpg" alt=""></a>
+                    </div>
+                    <div class="pride__elem">
+                            <a href="images/car-2.jpg" data-lightbox="car-2" data-title="My caption"><img src="images/car-2.jpg" alt=""></a>
+                    </div>
+                    <div class="pride__elem">
+                            <a href="images/car-3.jpg" data-lightbox="car-3" data-title="My caption"><img src="images/car-3.jpg" alt=""></a>
+                    </div>
+            </div>
+                <button class="pride__button button">
+                    смотреть еще
+                </button>    
+            </div>
+        </div>
+    </section>
+    <section class="comments" id="comments">
+        <div class="container">
+            <div class="comments__wrapper">
+                <div>
+                    <div class="text_red">Наши отзывы</div>
+                    <h2 class="head-2">Что о нас говорят?</h2>
+                </div>
+                <div class="owl-carousel comments__block">
+                    <div class="comments__elem"> 
+                        <div class="image_circle">
+                            <div></div>
+                        </div> 
+                        <span class="name">Петр Петров</span>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </span>
+                    </div>
+                    <div class="comments__elem"> 
+                        <div class="image_circle">
+                            <div></div>
+                        </div> 
+                        <span class="name">Петр Петров</span>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </span>
+                    </div>
+                    <div class="comments__elem"> 
+                        <div class="image_circle">
+                            <div></div>
+                        </div> 
+                        <span class="name">Петр Петров</span>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </span>
+                    </div>
+                    <div class="comments__elem"> 
+                        <div class="image_circle">
+                            <div></div>
+                        </div> 
+                        <span class="name">Петр Петров</span>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </span>
+                    </div>
+                    <div class="comments__elem"> 
+                        <div class="image_circle">
+                            <div></div>
+                        </div> 
+                        <span class="name">Петр Петров</span>
+                        <span>Это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="location" id=location>
+        <div class="container">
+            <div class="location__wrapper">
+                <div>
+                    <div class="text_red">Наши контакты</div>
+                    <h2 class="head-2">Где мы находимся</h2>
+                </div>
+                <div class="location__block">
+                    <div class="location__blocks location__blocks-1">
+                        <div class="footer__contacts_number"><img src="img/call_icon.png" alt=""><span>+7(915)333-33-16</span></div>
+                        <div class="footer__contacts_number"><img src="img/location.png" alt=""><span>ул. Понтекорво д.4 б</span></div>
+                        <div class="footer__contacts_number"><img src="img/vk-circle.png" alt=""><span>auto_design_detailing</span></div>
+                        <div class="footer__contacts_number"><img src="img/insta-circle.png" alt=""><span>povezlo_detailing</span></div>
+                        <div class="footer__contacts_number"><img src="img/clock-circle.png" alt=""><span>9:00 - 21:00</span></div>
+                    </div>
+                    <div class="location__blocks">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188.064447044228!2d37.1653267160758!3d56.74185892274281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b4425447729285%3A0xfe58fab2c9e3328c!2z0YPQuy4g0J_QvtC90YLQtdC60L7RgNCy0L4sIDTQsSwg0JTRg9Cx0L3QsCwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTQxOTg1!5e0!3m2!1sru!2sru!4v1568911241554!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
