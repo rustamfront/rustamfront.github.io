@@ -49,6 +49,16 @@
         $(".pride__button").click(function() {
             $(".pride__block_more").css({display: "flex"});
         })
+
+        var reviews = $("#comments");
+        var reviewsTop = reviews.offset().top;
+        $(window).bind("scroll", function() {
+            var windowTop = $(this).scrollTop();
+            if (windowTop > reviewsTop) {
+                $(".location__blocks").html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188.064447044228!2d37.1653267160758!3d56.74185892274281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b4425447729285%3A0xfe58fab2c9e3328c!2z0YPQuy4g0J_QvtC90YLQtdC60L7RgNCy0L4sIDTQsSwg0JTRg9Cx0L3QsCwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTQxOTg1!5e0!3m2!1sru!2sru!4v1568911241554!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen=""></iframe>');
+                $(window).unbind("scroll");
+            }
+        })
         });
     </script>
     <!-- Yandex.Metrika counter -->
@@ -351,7 +361,7 @@
                         <div class="footer__contacts_number"><img src="img/clock-circle.png" alt=""><span>9:00 - 21:00</span></div>
                     </div>
                     <div class="location__blocks">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2188.064447044228!2d37.1653267160758!3d56.74185892274281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b4425447729285%3A0xfe58fab2c9e3328c!2z0YPQuy4g0J_QvtC90YLQtdC60L7RgNCy0L4sIDTQsSwg0JTRg9Cx0L3QsCwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTQxOTg1!5e0!3m2!1sru!2sru!4v1568911241554!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        
                     </div>
                 </div>
             </div>
