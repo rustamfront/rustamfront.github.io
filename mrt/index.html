@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".reviews__container").owlCarousel({
+              dots: false,
+              loop: true,
+              navText: ["<button class='nav-prev'></button>", "<button class='nav-next'></button>'"],
+              responsive: {
+                  0: {
+                      items: 1,
+                      nav: false,
+                      margin: 0
+                  },
+
+                  576: {
+                    items: 2,
+                    nav: false,
+                    margin: 0
+                  },
+
+                  991: {
+                      items: 3,
+                      nav: true
+                  }
+              }
+            });
+
+            $(".partners__container").owlCarousel({
+              dots: false,
+              loop: true,
+              navText: ["<button class='nav-prev'></button>", "<button class='nav-next'></button>'"],
+              responsive: {
+                  0: {
+                      items: 2,
+                      nav: false
+                  },
+                  
+                  576: {
+                    items: 4,
+                    nav: false,
+                  },
+
+
+                  991: {
+                      items: 5,
+                      nav: true
+                  }
+              }
+            });
+
+            $(".address__link-1").click(function(e) {
+                e.preventDefault();
+                $(".popup-1").css("display", "block");
+                $("body").css("overflow", "hidden");
+            });
+
+            $(".popup__close-1").click(function() {
+                $(".popup-1").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+
+            $(".address__link-2").click(function(e) {
+                e.preventDefault();
+                $(".popup-2").css("display", "block");
+                $("body").css("overflow", "hidden");
+            });
+
+            $(".popup__close-2").click(function() {
+                $(".popup-2").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+
+            $(".address__link-3").click(function(e) {
+                e.preventDefault();
+                $(".popup-3").css("display", "block");
+                $("body").css("overflow", "hidden");
+            });
+
+            $(".popup__close-3").click(function() {
+                $(".popup-3").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+
+            $(".address__link-4").click(function(e) {
+                e.preventDefault();
+                $(".popup-4").css("display", "block");
+                $("body").css("overflow", "hidden");
+            });
+
+            $(".popup__close-4").click(function() {
+                $(".popup-4").css("display", "none");
+                $("body").css("overflow", "auto");
+            });
+
+            $("#check").click(function() {
+                if ($("#check").is(":checked")) {
+                    console.log("AAA");
+                    $(".check__contain img").css("display", "block");
+                } else {
+                    $(".check__contain img").css("display", "none");
+                }
+            })
+
+            $(".mobile-dropbox").click(function() {
+                $(".m-drop-menu").slideToggle();
+            })
+        });
+    </script>
+</head>
+<body class="home">
+    <div class="hamburger-menu">
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <ul class="menu__box">
+    <li class="menu__box-item"><a class="menu__item" href="#">Главная</a></li>
+    <li class="menu__box-item mobile-dropbox"><a class="menu__item" href="#">О компании <i class="fas fa-angle-down"></i></a>
+        <ul class="m-drop-menu">
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 1</a></li>
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 2</a></li>
+        </ul>
+    </li>
+    <li class="menu__box-item mobile-dropbox"><a class="menu__item" href="#">Сделать МРТ <i class="fas fa-angle-down"></i></a>
+        <ul class="m-drop-menu">
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 1</a></li>
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 2</a></li>
+        </ul>
+    </li>
+    <li class="menu__box-item mobile-dropbox"><a class="menu__item" href="#">Сделать КТ <i class="fas fa-angle-down"></i></a>
+        <ul class="m-drop-menu">
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 1</a></li>
+            <li class="m-drop-menu__item"><a href="" class="m-drop-menu__link">test 2</a></li>
+        </ul>
+    </li>
+    <li class="menu__box-item"><a class="menu__item" href="#">Комплексные программы</a></li class="menu__box-item">
+    <li class="menu__box-item"><a class="menu__item" href="#">Акции</a></li class="menu__box-item">
+    <li class="menu__box-item"><a class="menu__item" href="#">Контакты</a></li class="menu__box-item">
+  </ul>
+</div>
+    <div class="popup popup-1">
+        <div class="popup__container">
+            <div class="popup__close popup__close-1"><img src="img/close.png" alt=""></div>
+            <div class="popup__column">
+                <img src="img/office.jpg" alt="">
+            </div>
+            <div class="popup__column popup__column-1">
+                <div class="metro"><img src="img/metro.png" alt=""><span class="metro__text">Комсомольская</span></div>
+                <div class="loc-s"><img src="img/loc-s.png" alt=""><span class="loc-s__text">ул. Каланчевская д. 17, стр. 1</span></div>
+                <div class="tel"><img src="img/tel.png" alt=""><span class="tel__text">+7 (495) 241-91-24</span></div>
+                <button class="popup__button">Подробнее о центре</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-2">
+        <div class="popup__container">
+            <div class="popup__close popup__close-2"><img src="img/close.png" alt=""></div>
+            <div class="popup__column">
+                <img src="img/office.jpg" alt="">
+            </div>
+            <div class="popup__column popup__column-1">
+                <div class="metro"><img src="img/metro.png" alt=""><span class="metro__text">Комсомольская</span></div>
+                <div class="loc-s"><img src="img/loc-s.png" alt=""><span class="loc-s__text">ул. Каланчевская д. 17, стр. 1</span></div>
+                <div class="tel"><img src="img/tel.png" alt=""><span class="tel__text">+7 (495) 241-91-24</span></div>
+                <button class="popup__button">Подробнее о центре</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-3">
+        <div class="popup__container">
+            <div class="popup__close popup__close-3"><img src="img/close.png" alt=""></div>
+            <div class="popup__column">
+                <img src="img/office.jpg" alt="">
+            </div>
+            <div class="popup__column popup__column-1">
+                <div class="metro"><img src="img/metro.png" alt=""><span class="metro__text">Комсомольская</span></div>
+                <div class="loc-s"><img src="img/loc-s.png" alt=""><span class="loc-s__text">ул. Каланчевская д. 17, стр. 1</span></div>
+                <div class="tel"><img src="img/tel.png" alt=""><span class="tel__text">+7 (495) 241-91-24</span></div>
+                <button class="popup__button">Подробнее о центре</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-4">
+        <div class="popup__container">
+            <div class="popup__close popup__close-4"><img src="img/close.png" alt=""></div>
+            <div class="popup__column">
+                <img src="img/office.jpg" alt="">
+            </div>
+            <div class="popup__column popup__column-1">
+                <div class="metro"><img src="img/metro.png" alt=""><span class="metro__text">Комсомольская</span></div>
+                <div class="loc-s"><img src="img/loc-s.png" alt=""><span class="loc-s__text">ул. Каланчевская д. 17, стр. 1</span></div>
+                <div class="tel"><img src="img/tel.png" alt=""><span class="tel__text">+7 (495) 241-91-24</span></div>
+                <button class="popup__button">Подробнее о центре</button>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="top-header">
+            <div class="container">
+                <div class="row column_center">
+                    <a href="#" class="logo col-lg-3 col-md-4">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <div class="search col-lg-4">
+                        <input type="text" class="search__input" placeholder="Найти...">
+                    </div>
+                    <div class="messengers col-lg-2 col-md-4">
+                        <a href="" class="messengers__icon whatsapp"><img src="img/whatsapp.png" alt="whatsapp"></a>
+                        <a href="" class="messengers__icon viber"><img src="img/viber.png" alt="viber"></a>
+                        <a href="" class="messengers__icon telegram"><img src="img/telegram.png" alt="telegram"></a>
+                    </div>
+                    <div class="header__contacts col-lg-3 col-md-4">
+                        <div class="contact__text">Телефон в Москве</div>
+                        <div class="contact__tel">+7 (495) 241-91-24</div>
+                        <div class="contact__text">круглосуточно без выходных</div>
+                        <a href="#" class="contact__link">Заказать обратный звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="container">
+                <div class="row row_center">
+                    <div class="address__block">
+                        <img src="img/location.png" alt="location">
+                        <a href="#" class="address__link address__link-1">м. Комсомольская</a><br>
+                        <span class="address__text">ул. Каланчевская д. 17, стр.1</span>
+                    </div>
+                    <div class="address__block">
+                        <img src="img/location.png" alt="location">
+                        <a href="#" class="address__link address__link-2">м. Юго-западная</a><br>
+                        <span class="address__text">ул. Островитянова, д. 1, стр. 9</span>
+                    </div>
+                    <div class="address__block">
+                        <img src="img/location.png" alt="location">
+                        <a href="#" class="address__link address__link-3">м. Павелецкая</a><br>
+                        <span class="address__text">Павелецкая набережная д. 2 стр. 1</span>
+                    </div>
+                    <div class="address__block">
+                        <img src="img/location.png" alt="location">
+                        <a href="#" class="address__link address__link-4">м. Ленинский проспект</a><br>
+                        <span class="address__text">ул. Орджоникидзе, д. 11, стр. 10</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__menu">
+                            <ul class="menu-container">
+                                <li class="menu-list"><a class="menu-link" href="">Главная</a></li>
+                                <li class="menu-list dropdown">
+                                    <a class="menu-link" href="">О компании <img src="img/arrow.png" alt="arrow"></a>
+                                    <ul class="drop-menu">
+                                        <li class="drow-menu__item drow-menu__item_first"><a href="#" class="drop-menu__link">test 1</a></li>
+                                        <li class="drow-menu__item"><a href="#" class="drop-menu__link">test 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-list dropdown"><a class="menu-link" href="">Сделать МРТ <img src="img/arrow.png" alt="arrow">
+                                    </a>
+                                    <ul class="drop-menu">
+                                        <li class="drow-menu__item drow-menu__item_first"><a href="#" class="drop-menu__link">test 1</a></li>
+                                        <li class="drow-menu__item"><a href="#" class="drop-menu__link">test 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-list dropdown"><a class="menu-link dropdown" href="">Сделать КТ <img src="img/arrow.png" alt="arrow">
+                                    </a>
+                                    <ul class="drop-menu">
+                                        <li class="drow-menu__item drow-menu__item_first"><a href="#" class="drop-menu__link">test 1</a></li>
+                                        <li class="drow-menu__item"><a href="#" class="drop-menu__link">test 2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-list"><a class="menu-link" href="">Комплексные программы</a></li>
+                                <li class="menu-list"><a class="menu-link" href="">Акции</a></li>
+                                <li class="menu-list"><a class="menu-link" href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                        <h1 class="head-1">
+                            МРТ в Москве
+                        </h1>
+                        <ul class="check-container">
+                            <li class="check-item">
+                                <span class="check-text">
+                                    Близко, круглосуточно, в день обращения без выходных
+                                </span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-text">
+                                    С расшифровкой и консультацией врача
+                                </span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-text">
+                                    Безвредно — можно делать часто
+                                </span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-text">
+                                    Европейский стандарт качества по доступной цене
+                                </span>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="col-lg-7 col-md-6 header__register">
+                        <div class="circle">
+                            <img src="img/circle.png" alt="">
+                        </div>
+                        <form action="" class="header__form">
+                            <h3 class="head-3">
+                                Получить бесплатную консультацию
+                            </h3>
+                            <input class="form__input" type="text" placeholder="Введите ваше имя">
+                            <input class="form__input" type="text" placeholder="Введите ваш номер телефона">
+                            <textarea class="form__textarea" name="" placeholder="Опишите свою проблему"></textarea>
+                            <input type="checkbox" id="check">
+                            <label class="form__label" for="check"><div class="check__contain"><img src="img/mark.png" alt=""></div>Согласие на обработку <br>персональных данных</label>
+                            <input class="button" type="submit" value="Получить консультацию">
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="virtues">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2">
+                    10 причин пройти диагностику в МРТ24
+                </h2>
+                <div class="virtues__container col-lg-12">
+                    <div class="row">
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">1</span>
+                                <img src="img/L1.png" alt="">
+                            </div>
+                            
+                            <div class="virtues__info">
+                                <div class="virtues__head">Ведущие позиции в отрасли с 2009 года</div>
+                                <span class="virtues__text">Богатый опыт и неподдельный профессионализм, подкрепленные доверием ведущих клиник и страховых компаний.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">2</span>
+                                <img src="img/L2.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">12 тыс. московских врачей рекомендуют нас</div>
+                            <span class="virtues__text">Медики из государственных больниц и частных клиник, молодые специалисты и известные врачи - все без исключения доверяют МРТ24!</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">3</span>
+                                <img src="img/L3.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">Лучшие специалисты в Москве</div>
+                            <span class="virtues__text">Наши врачи прошли обучение и стажировку в Европе, на базе учебных центров Сесиль и Бурденко.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">4</span>
+                                <img src="img/L4.png" alt="">
+                            </div>
+                            
+                            <div class="virtues__info">
+                                <div class="virtues__head">Более 350 тыс. пациентов в год</div>
+                                <span class="virtues__text">Взрослые и дети, беременные женщины, люди с ограниченными возможностями и лишним весом.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">5</span>
+                                <img src="img/L5.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">Доступные цены на МРТ</div>
+                            <span class="virtues__text">Окончательная цена за исследование, без доплат и обмана. Только в МРТ24, пациент может сам формировать стоимость исследования.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">6</span>
+                                <img src="img/L6.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">Работаем круглосуточно без выходных</div>
+                            <span class="virtues__text">Шаговая доступность от метро, разные районы Москвы, собственный колл-центр.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">7</span>
+                                <img src="img/L7.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">Современное оборудование</div>
+                            <span class="virtues__text">Новые томографы GE и Siemens. Максимальная точность диагностики без облучения.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">8</span>
+                                <img src="img/L8.png" alt="">
+                            </div>
+                            
+                            <div class="virtues__info">
+                                <div class="virtues__head">Консультация врача</div>
+                                <span class="virtues__text">Разъяснение результатов обследования, рекомендации специалиста.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">9</span>
+                                <img src="img/L9.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">Уникальные услуги без вреда для здоровья</div>
+                            <span class="virtues__text">Мы делаем безопасный наркоз и контрастирование по Европейскому стандарту.</span>
+                            </div>
+                        </div>
+                        <div class="virtues__elem col-lg-6">
+                            <div class="virtues__circle">
+                                <span class="virtues__num">10</span>
+                                <img src="img/L10.png" alt="">
+                            </div>
+                            <div class="virtues__info">
+                            <div class="virtues__head">МРТ для слабослышащих и глухих людей</div>
+                            <span class="virtues__text">Мы используем уникальную систему, позволяющую общаться с глухими пациентами без переводчика.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2">
+                    Что такое МРТ? Ответы в нашем видео!
+                </h2>
+                <div class="youtube">
+                        <iframe src="https://www.youtube.com/embed/DeDk3BYfodA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sign-up">
+        <div class="container">
+            <div class="row">
+                <form class="sign-up__form">
+                    <h3 class="head-3">
+                        Запишитесь к нам на МРТ
+                    </h3>
+                    <div class="container__sign-up__input">
+                        <input class="sign-up__input" type="text" placeholder="Введите ваше имя">
+                        <input placeholder="Введите ваш номер" class="sign-up__input" type="text">
+                    </div>
+                    <textarea placeholder="Опишите вашу проблему" class="sign-up__textarea"></textarea>
+                    <input class="sign-up__btn button" type="submit" value="Записаться">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="discounts">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2 col-lg-12">
+                    Акции
+                </h2>
+                <div class="discounts__block col-lg-8">
+                    <div class="discounts__elem discounts__elem-1">
+                        <div class="discounts__img discounts__img-1"></div>
+                        <div class="discounts__info">
+                            <div class="discounts__head">Акция "Выгодные часы"! Дарим скидку 35% на МРТ головного мозга и позвоночника.</div>
+                            <div class="discounts__text">До  30 ноября  стоимость МРТ головного мозга и любого отдела позвоночника на ул. Островитянова, ночью — 2500 руб, днем — 3500 рублей, в зависимости от времени и загруженности центра! А в рамках специальной акции мы на 10% снижаем цену в центре на Павелецкой, а с 2 до 6 часов, в центрах на Комсомольской и Ленинском проспекте.</div>
+                            <a href="" class="discounts__link">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="discounts__elem discounts__elem-2">
+                        <div class="discounts__img discounts__img-2"></div>
+                        <div class="discounts__info">
+                            <div class="discounts__head">Каждому пациенту 1000 рублей в подарок!</div>
+                            <div class="discounts__text">Всем пациентам, прошедшим МРТ, мы дарим сертификат, позволяющий сделать следующее исследование ДЕШЕВЛЕ!</div>
+                            <a href="" class="discounts__link">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="discounts__elem discounts__elem-3">
+                        <div class="discounts__img discounts__img-3"></div>
+                        <div class="discounts__info">
+                            <div class="discounts__head">Специальная программа для боксеров!</div>
+                            <div class="discounts__text">При предъявлении документа (например, боксерской книжки), все профессиональные боксеры могут получить скидку на МРТ головного мозга.</div>
+                            <a href="" class="discounts__link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="discounts__block discounts__block-1 col-lg-4 col-md-9 col-sm-9">
+                    <div class="discounts__help">
+                        <div class="help__header">
+                            Поможем детям
+                        </div>
+                        <img src="img/child.jpg" alt="">
+                        <p class="help__text_black">С вашей помощью нам удалось спасти Селиверстова Алексея. Спасибо!</p>
+                        <div class="help__text_ylw">Но сегодня больные дети все также нуждаются в вашей поддержке.</div>
+                        <button class="help__btn">Узнать подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2 col-lg-12">Отзывы</h2>
+                <div class="reviews__container owl-carousel">
+                    <div class="reviews__elem">
+                        <div class="like">
+                            <img src="img/like.png" alt="">
+                        </div>
+                        <div class="reviews__head">Юлия</div>
+                        <div class="reviews__text">Делала МРТ шейного отдела позвоночника. Все прошло четко, без задержек, накануне позвонили и напомнили о записи. Девочки в регистратуре приветливые. Удобные комнатки для переодевания с сейфом. В</div>
+                        <div class="reviews__data">10.11.2019</div>
+                    </div>
+                    <div class="reviews__elem">
+                        <div class="like">
+                            <img src="img/like.png" alt="">
+                        </div>
+                        <div class="reviews__head">Вера</div>
+                        <div class="reviews__text">Сегодня у Вас проходила МРТ, результат уже на почте. Мне у Вас понравилось!) оч. милая администратор, большое спасибо доктору, который в ночи делает МРТ. При необходимости, обязательно вернусь!</div>
+                        <div class="reviews__data">10.11.2019</div>
+                    </div>
+                    <div class="reviews__elem">
+                        <div class="like">
+                            <img src="img/like.png" alt="">
+                        </div>
+                        <div class="reviews__head">Фёдор и его мама Ксения</div>
+                        <div class="reviews__text">Фёдор и его мама Ксения безумно благодарны «космической команде» клиники на Юго-Западной. Кроме того, что ребенок в 5 лет совершенно спокойно перенес эту совсем недетскую процедуру, так он еще с утра заявляет: «ма, мне</div>
+                        <div class="reviews__data">10.11.2019</div>
+                    </div>
+                    <div class="reviews__elem">
+                        <div class="like">
+                            <img src="img/like.png" alt="">
+                        </div>
+                        <div class="reviews__head">Фёдор и его мама Ксения</div>
+                        <div class="reviews__text">Фёдор и его мама Ксения безумно благодарны «космической команде» клиники на Юго-Западной. Кроме того, что ребенок в 5 лет совершенно спокойно перенес эту совсем недетскую процедуру, так он еще с утра заявляет: «ма, мне</div>
+                        <div class="reviews__data">10.11.2019</div>
+                    </div>
+                </div>
+                <div class="reviews__buttons">
+                    <button class="reviews__btn reviews__btn_blue">Все отзывы</button>
+                    <button class="reviews__btn reviews__btn_green">Добавить отзыв</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="specialists">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2 col-lg-12">
+                    Наши специалисты
+                </h2>
+                <div class="specialists__container">
+                    <a href="#" class="specialists__elem">
+                        <img src="img/Layer 2.png" alt="">
+                        <div class="specialists__head">
+                            Алексеевая Елена Сергеевна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, ведущий специалист сети центров «МРТ24», стаж работы 8 лет.
+                        </div>
+                    </a>
+                    <a href="#" class="specialists__elem"><img src="img/2.png" alt="">
+                        <div class="specialists__head">
+                            Чугаев Антон Иванович
+                        </div>
+                        <div class="specialists__text">
+                            Главный врач сети центров «МРТ24», автор мастер-класса по чтению МРТ-снимков, стаж работы более 10 лет.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/3.png" alt="">
+                        <div class="specialists__head">
+                            Васильева Анастасия Павловна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, прошла стажировку в Австрии (г.Грац), стаж работы более пяти лет.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/4.png" alt="">
+                        <div class="specialists__head">
+                            Газина Олеся Андреевна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, участник международных и всероссийских научных медицинских конференций, стаж работы более пяти лет.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/5.png" alt="">
+                        <div class="specialists__head">
+                            Пронина Наталья Ивановна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, участник всероссийских медицинских конференций, стаж работы более 10 лет.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/6.png" alt="">
+                        <div class="specialists__head">
+                            Баширов Зия Алискерович
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, прошел обучение по программе "Современные аспекты магнитно-резонансной томографии".
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/7.png" alt="">
+                        <div class="specialists__head">
+                            Землякова Дарья Константиновна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, прошел обучение по программе "Современные аспекты магнитно-резонансной томографии".
+                        </div></a >
+                    <a href="#" class="specialists__elem"><img src="img/8.png" alt="">
+                        <div class="specialists__head">
+                            Артемьев Василий Сергеевич
+                        </div>
+                        <div class="specialists__text">
+                            Ведущий специалист МРТ24, врач-рентгенолог, автор мастер-классов по МРТ.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/9.png" alt="">
+                        <div class="specialists__head">
+                            Васильцов Александр Григорьевич
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, участник всероссийских медицинских конференций, стаж работы более 3 лет.
+                        </div></a>
+                    <a href="#" class="specialists__elem"><img src="img/10.png" alt="">
+                        <div class="specialists__head">
+                            Шейх Жанна Владимировна
+                        </div>
+                        <div class="specialists__text">
+                            Врач-рентгенолог, доктор медицинских наук, профессор, стаж работы 25 лет.
+                        </div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mrt">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2">
+                    МРТ в Москве – круглосуточно и оперативно
+                </h2>
+                <p class="mrt__text">
+                    Наши центры МР-диагностики работают круглосуточно, без перерыва и выходных. Чтобы получить бесплатную консультацию или записаться на исследование, позвоните в наш колл-центр или оставьте заявку на сайте (чат или кнопка обратной связи). На сайте http://mrt24.ru можно выбрать нужное исследование и уточнить цены на услуги МРТ в Москве и Московской области.
+                </p>
+
+                <h3 class="mrt__head-3">Как быстро пройти диагностику</h3>
+                <p class="mrt__text">
+                    Если вам необходимо пройти исследование быстро и без очереди, вам необходимо позвонить в наш колл-центр, выбрать адрес и предпочтительное время для исследования. Оператор учтет ваши пожелания и запишет в один из наших центров. В день исследования вы получите результат диагностики и заключение врача.
+                </p>
+
+                <h4 class="mrt__head-4">Центры МРТ24 в Москве</h4>
+                <div class="mrt__container">
+                    <div class="mrt__elem">
+                        <img src="img/location-1.png" alt="">
+                        <div class="adress__bold">м. Павелецкая</div>
+                        <div class="address__light">Павелецкая набережная, д.2</div>
+                        <div class="address__italic">томограф<br> мощностью 1,5 Тесла</div>
+                    </div>
+                    <div class="mrt__elem"><img src="img/location-1.png" alt="">
+                        <div class="adress__bold">м. Юго-западная (м. Коньково)</div>
+                        <div class="address__light">ул. Островитянова, д. 1, стр. 9</div>
+                        <div class="address__italic">томограф<br> мощностью 0,35 Тесла</div></div>
+                    <div class="mrt__elem"><img src="img/location-1.png" alt="">
+                        <div class="adress__bold">м. Комсомольская</div>
+                        <div class="address__light">ул. Каланчевская д. 17, стр. 1</div>
+                        <div class="address__italic">томограф<br> мощностью 1,5 Тесла</div></div>
+                    <div class="mrt__elem"><img src="img/location-1.png" alt="">
+                        <div class="adress__bold">м. Ленинский проспект (Площадь Гагарина)</div>
+                        <div class="address__light">ул. Орджоникидзе, д. 11, стр. 10</div>
+                        <div class="address__italic">томограф<br> мощностью 1,5 Тесла</div></div>
+                </div>
+                <p class="mrt__text_bold">Методика МРТ</p>
+                <p class="mrt__text">
+
+Метод магнитно-резонансного исследования человеческого организма появился полвека назад. Сканирование проводится благодаря магнитным полям и радиоволнам, при этом вредные волны, такие как используются при КТ-диагностике, при МРТ не применяются. Обратите внимание на противопоказания: наличие кардио-стимулятора, водителя ритма, искусственного клапана типа Starr-Edwards; наличие металла в теле (кроме титана и тантала).
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <div class="row">
+                <h2 class="head-2 col-lg-12">
+                    Наши партнеры
+                </h2>
+                <div class="partners__container owl-carousel">
+                    <div class="partners__elem"><img src="img/sesil.png"></div>
+                    <div class="partners__elem"><img src="img/eapteka.png"></div>
+                    <div class="partners__elem"><img src="img/yellmed.png"></div>
+                    <div class="partners__elem"><img src="img/life-line.png"></div>
+                    <div class="partners__elem"><img src="img/center-neuro.png"></div>
+                    <div class="partners__elem"><img src="img/sesil.png"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__header">
+                        О компании
+                    </div>
+                    <ul class="footer__list-container">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">О компании</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Новости</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Лицензии</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Специалисты</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Отзывы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Статьи</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Благотворительность</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Политика МРТ24 в отношении обработки персональных данных</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Нормативно-правовая документация</a></li>
+                    </ul>    
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__header">
+                        Услуги
+                    </div>
+                    <ul class="footer__list-container">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">МРТ</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">КТ</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Генетический тест</a></li>
+                    </ul> 
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer__header">
+                        Контакты
+                    </div>
+                    <ul class="footer__list-container">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Комсомольская</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Юго-Западная</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Павелецкая</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Ленинскиий проспект</a></li>
+                    </ul>
+                    <div class="footer__header footer__header_mt">
+                        Мы в соцсетях
+                    </div>
+                    <ul class="footer__social-container">
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><img src="img/fb.png" alt=""></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><img src="img/vk.png" alt=""></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><img src="img/ok.png" alt=""></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><img src="img/tw.png" alt=""></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><img src="img/insta.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="footer__text_small">© Магнитно-резонансная томография в Москве «МРТ24», 2019</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
