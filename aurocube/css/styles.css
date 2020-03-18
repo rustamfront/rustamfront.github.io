@@ -328,3 +328,33 @@ a {
 
 .vk {
   background-position: 54px 0; }
+
+@media (max-width: 576px) {
+  .block {
+    padding: 0 45px;
+  }
+
+  .logo__text {
+    display: none;
+  }
+
+  .head-2 {
+    font-size: 3.875em;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .main__text {
+    width: 100%;
+  }
+
+  .head-4 {
+    margin-top: 15px;
+  }
+
+  .main__block p {
+    display: none;
+  }
+}
