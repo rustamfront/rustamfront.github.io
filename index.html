@@ -1,29 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <title>Портфолио</title>
+
+	<meta charset="utf-8">
+
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+	
+	<link rel="stylesheet" href="css/styles.min.css">
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>
-            Портфолио
-        </h1>
-        <div class="portfolio__container">
-            <a href="autodesign" class="portfolio__elem">
-                <img src="img/autodesign.JPG" alt="АВТО-ДИЗАЙН">
-            </a>
-            <a href="aurocube" class="portfolio__elem">
-                <img src="img/aurocube.JPG" alt="aurocube">
-            </a>
-            <a href="mrt" class="portfolio__elem">
-                <img src="img/MRT.JPG" alt="mrt">
-            </a>
-        </div>
-    </div>
+
+	<!-- Custom HTML / Remove before use -->
+	<!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
+
+	<header class="header">
+		<div class="container">
+			<div class="header__content">
+				<p class="header__text">Привет! Меня зовут Рустам. Я - </p>
+				<h1 class="head-1">frontend разработчик</h1> 
+				<p class="header__text">Занимаюсь версткой веб-страниц любой сложности</p>
+			</div>
+		</div>
+	</header>
+	<section class="myWork">
+		<div class="container">
+			<h2 class="head-2">
+				Мои работы
+			</h2>
+			<div class="myWork__content">
+				<a class="img-wrap" href="aurocube"> 
+					<img class="img" src="img/@1x/aurocube.jpg" alt="">
+					<div class="img__text">
+						<div class="img__text_big">
+							aurocube
+						</div>
+						<div class="img__text_small">
+							Верстка
+						</div>
+					</div>
+				</a>
+				<a class="img-wrap" href="autodesign">
+					<img class="img" src="img/@1x/autodesign.jpg" alt="">
+					<div class="img__text">
+						<div class="img__text_big">
+							авто-дизайн
+						</div>
+						<div class="img__text_small">
+							Верстка
+						</div>
+					</div>
+				</a>
+				<a class="img-wrap" href="mrt24">
+					<img class="img" src="img/@1x/mrt24.jpg" alt="">
+					<div class="img__text">
+						<div class="img__text_big">
+							МРТ24
+						</div>
+						<div class="img__text_small">
+							Верстка
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="reviews">
+		<div class="container">
+			<h2 class="head-2">
+				Отзывы
+			</h2>
+			<div class="decor">
+				<div class="decor__img"></div>
+			</div>
+			<div class="slider">
+				<div class="slider-item">
+					<p class="slider__text">
+						Отличный исполнитель. Всё быстро и качественно, я рад что такой специалист мне помог, которому не надо объяснять по сто раз! Советую!
+					</p>
+					<span class="slider__address">
+						Евгений
+					</span>
+				</div>
+				<div class="slider-item">
+					<p class="slider__text">
+						Отличный исполнитель. Всё быстро и качественно, я рад что такой специалист мне помог, которому не надо объяснять по сто раз! Советую!
+					</p>
+					<span class="slider__address">
+						Евгений
+					</span>
+				</div>
+				<div class="slider-item">
+					<p class="slider__text">
+						Отличный исполнитель. Всё быстро и качественно, я рад что такой специалист мне помог, которому не надо объяснять по сто раз! Советую!
+					</p>
+					<span class="slider__address">
+						Евгений
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contacts">
+		<div class="container contacts__container">
+			<h2 class="head-2">
+				Контакты
+			</h2>
+			<div class="contacts__content">
+				<div class="contacts__info">
+					<div class="email">
+						<img src="img/mail.svg" alt=""><span>rustamfrontend@gmail.com</span> 
+					</div>
+					<div class="tel">
+						<img src="img/tel.svg" alt=""><span></span>+7(999)999-99-99</span> 
+					</div>
+				</div>
+				<form class="form" action="mail.php" method="post">
+					<input type="text" class="input input__name" name="name" placeholder="имя"><input type="email" name="email" class="input" placeholder="mail"><br>
+					<textarea class="textarea" name="description" placeholder="Сообщение"></textarea><br>
+					<input type="submit" name="submit" class="submit">
+				</form>
+			</div>
+		</div>
+	</section>
+	<script src="js/scripts.min.js"></script>
+
 </body>
 </html>
